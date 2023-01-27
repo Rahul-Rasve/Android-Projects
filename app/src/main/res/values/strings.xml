@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Phone Book</string>
+    <string name="adduser">add user</string>
+    <string name="contacts">Contacts</string>
+    <string name="addContact">Add Contact</string>
+    <string name="person">person</string>
+    <string name="name">Name</string>
+    <string name="mobile">Mobile</string>
+    <string name="email">Email</string>
+    <string name="editUser">edit user details</string>
+    <string name="deleteUser">delete user</string>
+    <string name="person_avatar">person avatar</string>
+    <string name="edit_contact">Edit Contact</string>
+    <string name="positive">Yes</string>
+</resources>
