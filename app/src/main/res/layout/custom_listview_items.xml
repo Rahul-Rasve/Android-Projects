@@ -2,9 +2,9 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/textView"
     android:textColor="@color/black"
-    android:paddingTop="15dp"
-    android:paddingBottom="15dp"
-    android:paddingLeft="15dp"
-    android:textSize="24sp"
+    android:paddingTop="@dimen/_10sdp"
+    android:paddingBottom="@dimen/_10sdp"
+    android:paddingLeft="@dimen/_10sdp"
+    android:textSize="@dimen/_22ssp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"/>

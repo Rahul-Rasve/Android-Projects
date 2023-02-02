@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace 'com.rahul.phonebook'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.rahul.phonebook"
         minSdk 16
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -36,4 +36,8 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //resizeable
+    implementation 'com.intuit.ssp:ssp-android:1.1.0'
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
 }

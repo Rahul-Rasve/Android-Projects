@@ -1,9 +1,14 @@
 package com.rahul.phonebook;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,11 +19,12 @@ import com.rahul.phonebook.handler.DbHandler;
 public class ContactDetails extends AppCompatActivity {
 
     TextView nameText, mobileText, emailText;
-    ImageButton editUser, deleteUser;
+    ImageButton editUser, deleteUser, callingBtn;
 
     public static final String NAME = "ContactName";
     public static final String MOBILE = "ContactMobile";
     public static final String EMAIL = "ContactEmail";
+    public static final int CODE = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +40,7 @@ public class ContactDetails extends AppCompatActivity {
 
         editUser = findViewById(R.id.editUser);
         deleteUser = findViewById(R.id.deleteUser);
+        callingBtn = findViewById(R.id.callingBtn);
 
         //get intent object
         Intent intent = getIntent();
@@ -76,6 +83,17 @@ public class ContactDetails extends AppCompatActivity {
 
             //popup the alert
             alert.show();
+        });
+
+        callingBtn.setOnClickListener(v -> {
+            if(ContextCompat.checkSelfPermission(this, android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE}, CODE);
+            }
+            else{
+                String phoneNumber = mobileText.getText().toString();
+                Intent intent3 = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + phoneNumber));
+                startActivity(intent3);
+            }
         });
     }
 }

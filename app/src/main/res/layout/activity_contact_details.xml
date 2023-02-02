@@ -8,9 +8,9 @@
 
     <ImageView
         android:id="@+id/avatar"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_23sdp"
         android:contentDescription="@string/person_avatar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,13 +20,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/callingBtn"
         app:layout_constraintTop_toBottomOf="@+id/avatar">
 
         <LinearLayout
@@ -53,9 +52,9 @@
                 android:layout_weight="3"
                 android:gravity="center_vertical"
                 android:hint="@string/name"
-                android:paddingLeft="10dp"
+                android:paddingLeft="@dimen/_5sdp"
                 android:textColorHint="#78909C"
-                android:textSize="20sp" />
+                android:textSize="@dimen/_17ssp" />
         </LinearLayout>
 
         <LinearLayout
@@ -81,9 +80,9 @@
                 android:layout_weight="3"
                 android:gravity="center_vertical"
                 android:hint="@string/mobile"
-                android:paddingLeft="10dp"
+                android:paddingLeft="@dimen/_5sdp"
                 android:textColorHint="#78909C"
-                android:textSize="20sp" />
+                android:textSize="@dimen/_17ssp" />
         </LinearLayout>
 
         <LinearLayout
@@ -109,20 +108,30 @@
                 android:layout_weight="3"
                 android:gravity="center_vertical"
                 android:hint="@string/email"
-                android:paddingLeft="10dp"
+                android:paddingLeft="@dimen/_5sdp"
                 android:textColorHint="#78909C"
-                android:textSize="20sp" />
+                android:textSize="@dimen/_17ssp" />
         </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
+    <ImageButton
+        android:id="@+id/callingBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:clickable="true"
+        android:src="@drawable/ic_calling"
+        android:foregroundGravity="center_horizontal"
+        android:contentDescription="@string/calling"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -130,7 +139,7 @@
         <ImageButton
             android:id="@+id/editUser"
             android:layout_width="0dp"
-            android:layout_height="80dp"
+            android:layout_height="@dimen/_60sdp"
             android:layout_weight="1"
             android:contentDescription="@string/editUser"
             app:srcCompat="@mipmap/ic_launcher_edit_user_foreground" />
@@ -138,7 +147,7 @@
         <ImageButton
             android:id="@+id/deleteUser"
             android:layout_width="0dp"
-            android:layout_height="80dp"
+            android:layout_height="@dimen/_60sdp"
             android:layout_weight="1"
             android:contentDescription="@string/deleteUser"
             app:srcCompat="@mipmap/ic_launcher_delete_user_foreground" />

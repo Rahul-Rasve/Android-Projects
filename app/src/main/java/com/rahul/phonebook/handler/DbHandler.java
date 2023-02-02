@@ -28,7 +28,9 @@ public class DbHandler extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        String drop = "DROP TABLE " + Parameters.TABLE_NAME + ";";
+        db.execSQL(drop);
+        onCreate(db);
     }
 
     public void addContact(Contact contact){

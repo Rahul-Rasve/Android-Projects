@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //array adapter
-        ArrayAdapter arrayAdapter = new ArrayAdapter(MainActivity.this, R.layout.custom_listview_items, contactList);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(MainActivity.this, R.layout.custom_listview_items, contactList);
         listView.setAdapter(arrayAdapter);
 
         //onClickListener for listView item

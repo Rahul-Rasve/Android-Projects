@@ -10,13 +10,12 @@
         android:id="@+id/headerText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:fontFamily="@font/alata"
         android:text="@string/edit_contact"
         android:textColor="@color/black"
-        android:textSize="34sp"
+        android:textSize="@dimen/_30ssp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,8 +24,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_40sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/saveContact"
@@ -35,7 +34,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="30dp"
+            android:layout_margin="@dimen/_25sdp"
             android:layout_weight="1"
             android:orientation="horizontal"
             android:weightSum="3">
@@ -58,13 +57,13 @@
                 android:hint="Name"
                 android:inputType="textPersonName"
                 android:textColorHint="#78909C"
-                android:textSize="22sp" />
+                android:textSize="@dimen/_17ssp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="30dp"
+            android:layout_margin="@dimen/_25sdp"
             android:layout_weight="1"
             android:orientation="horizontal"
             android:weightSum="3">
@@ -87,14 +86,14 @@
                 android:hint="Mobile"
                 android:inputType="phone"
                 android:textColorHint="#78909C"
-                android:textSize="22sp"
+                android:textSize="@dimen/_17ssp"
                 tools:ignore="DuplicateSpeakableTextCheck" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="30dp"
+            android:layout_margin="@dimen/_25sdp"
             android:layout_weight="1"
             android:orientation="horizontal"
             android:weightSum="3">
@@ -117,7 +116,7 @@
                 android:hint="Email"
                 android:inputType="textEmailAddress"
                 android:textColorHint="#78909C"
-                android:textSize="22sp"
+                android:textSize="@dimen/_17ssp"
                 tools:ignore="DuplicateSpeakableTextCheck" />
         </LinearLayout>
     </LinearLayout>
@@ -126,13 +125,13 @@
         android:id="@+id/saveContact"
         android:text="Save Contact"
         android:background="@color/black"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:textSize="20sp"
+        android:paddingStart="@dimen/_7sdp"
+        android:paddingEnd="@dimen/_7sdp"
+        android:textSize="@dimen/_17ssp"
         android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="@dimen/_45sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
